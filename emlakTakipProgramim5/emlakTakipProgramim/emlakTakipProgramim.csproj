@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F4B3978D-330A-4042-AE4A-7EB557BE0D34}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>emlakTakipProgramim</RootNamespace>
+    <AssemblyName>emlakTakipProgramim</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alicilar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alicilar.Designer.cs">
+      <DependentUpon>Alicilar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="arsaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="arsaForm.Designer.cs">
+      <DependentUpon>arsaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="arsaRapor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>arsaRapor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="emlakVeritabaniDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>emlakVeritabaniDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fotografDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fotografDuzenle.Designer.cs">
+      <DependentUpon>fotografDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIlanlariDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIlanlariDuzenle.Designer.cs">
+      <DependentUpon>frmIlanlariDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="isyeriRapor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>isyeriRapor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="konutRapor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>konutRapor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="fotograflariGor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fotograflariGor.Designer.cs">
+      <DependentUpon>fotograflariGor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giris.Designer.cs">
+      <DependentUpon>Giris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ilanlariGor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ilanlariGor.Designer.cs">
+      <DependentUpon>ilanlariGor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="isyeriForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="isyeriForm.Designer.cs">
+      <DependentUpon>isyeriForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kullaniciBilgiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kullaniciBilgiler.Designer.cs">
+      <DependentUpon>kullaniciBilgiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kullanicilar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kullanicilar.Designer.cs">
+      <DependentUpon>Kullanicilar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniciYetkiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KullaniciYetkiler.Designer.cs">
+      <DependentUpon>KullaniciYetkiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaporArsa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaporArsa.Designer.cs">
+      <DependentUpon>RaporArsa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaporIsyeri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaporIsyeri.Designer.cs">
+      <DependentUpon>RaporIsyeri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaporKonut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaporKonut.Designer.cs">
+      <DependentUpon>RaporKonut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="saticiEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="saticiEkle.Designer.cs">
+      <DependentUpon>saticiEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="saticilariGor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="saticilariGor.Designer.cs">
+      <DependentUpon>saticilariGor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="satilikKonut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="satilikKonut.Designer.cs">
+      <DependentUpon>satilikKonut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UyeOl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UyeOl.Designer.cs">
+      <DependentUpon>UyeOl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="veritabaniBaglanti.cs" />
+    <Compile Include="anaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="anaForm.Designer.cs">
+      <DependentUpon>anaForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Alicilar.resx">
+      <DependentUpon>Alicilar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="arsaForm.resx">
+      <DependentUpon>arsaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="arsaRapor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>arsaRapor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fotografDuzenle.resx">
+      <DependentUpon>fotografDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIlanlariDuzenle.resx">
+      <DependentUpon>frmIlanlariDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="isyeriRapor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>isyeriRapor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="konutRapor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>konutRapor.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fotograflariGor.resx">
+      <DependentUpon>fotograflariGor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Giris.resx">
+      <DependentUpon>Giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ilanlariGor.resx">
+      <DependentUpon>ilanlariGor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="isyeriForm.resx">
+      <DependentUpon>isyeriForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kullaniciBilgiler.resx">
+      <DependentUpon>kullaniciBilgiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kullanicilar.resx">
+      <DependentUpon>Kullanicilar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KullaniciYetkiler.resx">
+      <DependentUpon>KullaniciYetkiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaporArsa.resx">
+      <DependentUpon>RaporArsa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaporIsyeri.resx">
+      <DependentUpon>RaporIsyeri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaporKonut.resx">
+      <DependentUpon>RaporKonut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="saticiEkle.resx">
+      <DependentUpon>saticiEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="saticilariGor.resx">
+      <DependentUpon>saticilariGor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="satilikKonut.resx">
+      <DependentUpon>satilikKonut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UyeOl.resx">
+      <DependentUpon>UyeOl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="anaForm.resx">
+      <DependentUpon>anaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="emlakVeritabaniDataSet.xsc">
+      <DependentUpon>emlakVeritabaniDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="emlakVeritabaniDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>emlakVeritabaniDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="emlakVeritabaniDataSet.xss">
+      <DependentUpon>emlakVeritabaniDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="emlakVeritabani.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="emlakVeritabani_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>emlakVeritabani.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
